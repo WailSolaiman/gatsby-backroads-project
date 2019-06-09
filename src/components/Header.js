@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import navbarLinks from '../constants/links'
 import socialIcons from '../constants/social-icons'
 import { FaStream } from 'react-icons/fa'
@@ -34,7 +34,9 @@ const Header = () => {
                     {navbarLinks.map((item, index) => {
                         return (
                             <li key={index}>
-                                <Link to={item.path}>{item.text}</Link>
+                                <AniLink fade to={item.path}>
+                                    {item.text}
+                                </AniLink>
                             </li>
                         )
                     })}

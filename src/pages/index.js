@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import Layout from '../components/Layout'
 //import SimpleHero from '../components/SimpleHero'
 import StyledHero from '../components/StyledHero'
 import Banner from '../components/Banner'
-import About from '../components/Home/About'
-import Services from '../components/Home/Services'
+import About from '../components/home/About'
+import Services from '../components/home/Services'
 
 const data = graphql`
     {
@@ -33,9 +34,9 @@ const Home = () => {
                                 title="Continue Exploring"
                                 info="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum aperiam ipsum hic reiciendis deleniti voluptates!"
                             >
-                                <Link to="/tours" className="btn-white">
+                                <AniLink fade to="/tours" className="btn-white">
                                     Explore Tours
-                                </Link>
+                                </AniLink>
                             </Banner>
                         </StyledHero>
                     )

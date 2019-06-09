@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import Layout from '../components/Layout'
 import Banner from '../components/Banner'
 import NotFoundStyles from '../css/error.module.css'
@@ -9,9 +9,9 @@ const NotFound = () => {
         <Layout>
             <header className={NotFoundStyles.error}>
                 <Banner title="oops, it is a dead end">
-                    <Link to="/" className="btn-white">
+                    <AniLink fade to="/" className="btn-white">
                         Back to Home
-                    </Link>
+                    </AniLink>
                 </Banner>
             </header>
         </Layout>
