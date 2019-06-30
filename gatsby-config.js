@@ -1,3 +1,7 @@
+require('dotenv').config({
+    path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
     siteMetadata: {
         title: 'BackRoads Website',
@@ -7,6 +11,9 @@ module.exports = {
     plugins: [
         `gatsby-plugin-sass`,
         `gatsby-plugin-styled-components`,
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
+        `gatsby-plugin-transition-link`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -14,8 +21,12 @@ module.exports = {
                 path: `${__dirname}/src/images/`,
             },
         },
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-sharp`,
-        `gatsby-plugin-transition-link`,
+        {
+            resolve: `gatsby-source-contentful`,
+            options: {
+                spaceId: process.env.CONTINTFUL_SPACE_ID,
+                accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+            },
+        },
     ],
 }
