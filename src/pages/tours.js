@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import AllTours from '../components/tours/AllTours'
 import StyledHero from '../components/StyledHero'
 
 class Tours extends Component {
@@ -8,7 +9,7 @@ class Tours extends Component {
         return (
             <Layout>
                 <StyledHero img={this.props.data.file.childImageSharp.fluid} />
-                <p>Tours Page</p>
+                <AllTours />
             </Layout>
         )
     }

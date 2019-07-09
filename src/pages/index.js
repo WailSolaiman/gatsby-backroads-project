@@ -7,6 +7,7 @@ import StyledHero from '../components/StyledHero'
 import Banner from '../components/Banner'
 import About from '../components/home/About'
 import Services from '../components/home/Services'
+import FeaturedTours from '../components/home/FeaturedTours'
 
 const data = graphql`
     {
@@ -44,6 +45,7 @@ const Home = () => {
             />
             <About />
             <Services />
+            <FeaturedTours />
         </Layout>
     )
 }
