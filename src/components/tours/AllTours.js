@@ -21,7 +21,7 @@ const allTours = graphql`
                     }
                     images {
                         fluid {
-                            ...GatsbyContentfulFluid_tracedSVG
+                            ...GatsbyContentfulFluid_withWebp_noBase64
                         }
                     }
                 }

@@ -8,14 +8,12 @@ export default class TourList extends Component {
         super(props)
         this.state = {
             tours: [],
-            filteredTorus: [],
         }
     }
 
     componentDidMount() {
         this.setState({
             tours: this.props.tours.edges,
-            filteredTorus: this.props.tours.edges,
         })
     }
 
@@ -24,7 +22,7 @@ export default class TourList extends Component {
             <section className={TourListStyles.tours}>
                 <SectionTitle title="our" subtitle="tours" />
                 <div className={TourListStyles.center}>
-                    {this.state.filteredTorus.map(({ node: tour }) => {
+                    {this.state.tours.map(({ node: tour }) => {
                         return <TourItem key={tour.contentful_id} tour={tour} />
                     })}
                 </div>

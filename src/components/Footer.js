@@ -26,8 +26,8 @@ const Footer = () => {
                 })}
             </div>
             <div className={FooterStyles.copyright}>
-                copyright &copy; Wail Solaiman - {new Date().getFullYear()}
-                all rights reserved
+                copyright &copy; Wail Solaiman - {new Date().getFullYear()} all
+                rights reserved
             </div>
         </footer>
     )

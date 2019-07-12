@@ -50,7 +50,7 @@ export const query = graphql`
             }
             images {
                 fluid {
-                    ...GatsbyContentfulFluid_tracedSVG
+                    ...GatsbyContentfulFluid_withWebp_noBase64
                 }
             }
         }
