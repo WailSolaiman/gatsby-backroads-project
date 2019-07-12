@@ -20,7 +20,7 @@ export const data = graphql`
         file(relativePath: { eq: "defaultBcg.jpeg" }) {
             childImageSharp {
                 fluid(quality: 90, maxWidth: 4160) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp
                 }
             }
         }
