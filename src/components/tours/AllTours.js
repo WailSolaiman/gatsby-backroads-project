@@ -20,8 +20,8 @@ const allTours = graphql`
                         info
                     }
                     images {
-                        fluid {
-                            ...GatsbyContentfulFluid
+                        fluid(quality: 100, maxWidth: 1920) {
+                            ...GatsbyContentfulFluid_noBase64
                         }
                     }
                 }
