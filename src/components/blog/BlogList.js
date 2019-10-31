@@ -12,8 +12,8 @@ const getPosts = graphql`
                     contentful_id
                     title
                     image {
-                        fluid {
-                            src
+                        fluid(quality: 100, maxWidth: 1920) {
+                            ...GatsbyContentfulFluid_noBase64
                         }
                     }
                     slug
@@ -32,9 +32,7 @@ const BlogList = () => {
             <SectionTitle title="our" subtitle="blog" />
             <div className={BlogListStyles.center}>
                 {posts.edges.map(({ node: post }) => {
-                    return (
-                        <BlogCard key={post.contentful_id} title={post.title} />
-                    )
+                    return <BlogCard key={post.contentful_id} post={post} />
                 })}
             </div>
         </section>
